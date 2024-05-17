@@ -1,0 +1,113 @@
+:root {
+    --main-color: teal;
+}
+
+
+.content {
+    width: 80%;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: impact;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1::before {
+    animation-name: header;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    content: "";
+}
+
+
+@keyframes header {
+    16.6% {
+        content: "|";
+    }
+
+    33.2% {
+        content: "Q|";
+    }
+
+    49.8% {
+        content: "Qu|"
+    }
+
+    66.4% {
+        content: "Quo|"
+    }
+
+    83% {
+        content: "Quot|"
+    }
+
+    100% {
+        content: "Quote|"
+    }
+}
+
+
+@media (max-width:280px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+.content p {
+    font-size: 35px;
+    padding-block: 10px;
+    text-align: center;
+}
+
+
+.btn:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.content i {
+    color: var(--main-color);
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+
+@keyframes move {
+    50% {
+        transform: translateY(30px);
+        color: #0d6efd;
+    }
+
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+
+.setting {
+    top: 30%;
+    background-color: var(--main-color);
+    padding: 10px;
+}
+
+.footer {
+    background-color: rgb(31, 32, 33);
+}
+
+span {
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.footer ul i {
+    transition: all 0.5s;
+}
+
+.footer ul i:hover {
+    color: var(--main-color) !important;
+}
